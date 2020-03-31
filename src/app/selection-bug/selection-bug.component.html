@@ -1,0 +1,36 @@
+<mat-card>
+    <div fxLayout="row" fxFlex="100%" fxLayoutGap="2%">
+        <div fxLayout="column" fxFlex="33%">
+            <mat-form-field>
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="searchModel.list1Value">
+                  <mat-option *ngFor="let val of searchResults.list1" [value]="val">
+                      {{val.NAME}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="column" fxFlex="33%">
+            <mat-form-field>
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="searchModel.list2Value">
+                  <mat-option *ngFor="let val of searchResults.list2" [value]="val">
+                      {{val.NAME}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="column" fxFlex="33%">
+            <mat-form-field>
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="searchModel.list3Value">
+                  <mat-option *ngFor="let val of searchResults.list3" [value]="val">
+                      {{val.NAME}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</mat-card>

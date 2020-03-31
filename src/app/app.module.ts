@@ -32,20 +32,25 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgxGraphModule } from '@swimlane/ngx-graph';
+import { SelectionBugComponent } from './selection-bug/selection-bug.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectionBugComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
@@ -78,12 +83,12 @@ import { NgxGraphModule } from '@swimlane/ngx-graph';
     MatSortModule,
     MatPaginatorModule,
     NgxGraphModule,
-/*     RouterModule.forRoot([
+    RouterModule.forRoot([
       {
-        path: '',
-        component: AppComponent
+        path: 'selection-bug',
+        component: SelectionBugComponent
       }
-    ]) */
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
